@@ -37,10 +37,25 @@ Visit: http://localhost:3000
 
 ## Documentation
 
+**Getting Started:**
 - **[QUICK_START.md](QUICK_START.md)** - Get started in 5 minutes
 - **[SETUP.md](SETUP.md)** - Detailed setup with troubleshooting
 - **[VERIFICATION_EXPLAINED.md](VERIFICATION_EXPLAINED.md)** - How verification actually works
 - **[TAVILY_SETUP.md](TAVILY_SETUP.md)** - Tavily API configuration guide
+
+**Deployment:**
+- **[DEPLOYMENT_SUMMARY.md](DEPLOYMENT_SUMMARY.md)** - Quick deployment overview
+- **[DEPLOYMENT_GUIDE.md](DEPLOYMENT_GUIDE.md)** - Complete deployment guide
+- **[DEPLOY_CHECKLIST.md](DEPLOY_CHECKLIST.md)** - Step-by-step checklist
+
+## Deployment
+
+Ready to deploy to production? We've prepared everything you need:
+
+**Backend:** Deploy to [Render](https://render.com) (Free tier available)
+**Frontend:** Deploy to [Vercel](https://vercel.com) (Free tier available)
+
+See [DEPLOYMENT_SUMMARY.md](DEPLOYMENT_SUMMARY.md) for complete instructions.
 
 ## Tech Stack
 
@@ -48,6 +63,8 @@ Visit: http://localhost:3000
 
 **Frontend:** Next.js, React, TypeScript, Tailwind, Framer Motion
 
+**Deployment:** Vercel (Frontend) + Render (Backend)
+
 ## Team
 
-Abhishek Gupta, Sundaram Singh, Anurag Raj - ITM University Gwalior
+Abhishek Gupta, Sundaram Singh (BETN1CS22175), Anurag Raj - ITM University Gwalior

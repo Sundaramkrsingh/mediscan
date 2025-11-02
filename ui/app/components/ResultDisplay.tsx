@@ -14,7 +14,6 @@ import {
   Globe,
   Barcode,
   ChevronDown,
-  ChevronUp,
   AlertCircle,
   CheckCircle2,
   XCircle,
@@ -109,7 +108,7 @@ export default function ResultDisplay({ result }: ResultDisplayProps) {
   const verificationScores = [
     {
       name: "Expiry",
-      score: result.details?.expiry_check?.found ? 100 : 0,
+      score: result.expiry_date ? 100 : 0,
     },
     {
       name: "GTIN",
@@ -121,7 +120,7 @@ export default function ResultDisplay({ result }: ResultDisplayProps) {
     },
     {
       name: "OCR",
-      score: result.raw_data?.ocr_texts?.[0]?.quality_score || 0,
+      score: result.raw_data?.ocr_texts?.length > 0 ? 100 : 0,
     },
   ];
 

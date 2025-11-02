@@ -203,7 +203,6 @@ export default function LoadingScreen() {
           const StepIcon = step.icon;
           const isCompleted = completedSteps.includes(index);
           const isCurrent = currentStep === index;
-          const isPending = index > currentStep;
 
           return (
             <motion.div

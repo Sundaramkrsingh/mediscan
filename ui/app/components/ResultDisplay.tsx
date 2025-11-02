@@ -936,14 +936,14 @@ export default function ResultDisplay({ result }: ResultDisplayProps) {
                               <motion.div
                                 initial={{ width: 0 }}
                                 animate={{
-                                  width: `${ocr.quality_score}%`,
+                                  width: `${ocr.quality_score || 0}%`,
                                 }}
                                 transition={{ duration: 1, delay: 0.5 + idx * 0.1 }}
                                 className="h-full bg-gradient-to-r from-purple-500 to-pink-500"
                               />
                             </div>
                             <span className="text-sm font-bold text-gray-900 w-12 text-right">
-                              {ocr.quality_score.toFixed(1)}%
+                              {(ocr.quality_score || 0).toFixed(1)}%
                             </span>
                           </div>
                         </div>

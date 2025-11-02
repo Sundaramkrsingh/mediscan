@@ -54,10 +54,26 @@ export interface VerificationResponse {
   recommendations: string[];
   details: VerificationDetails;
   raw_data: {
-    barcodes: Record<string, unknown>[];
-    ocr_texts: string[];
-    gs1_verification: Record<string, unknown> | null;
-    cdsco_verification: Record<string, unknown> | null;
+    barcodes: {
+      type?: string;
+      data?: string;
+      [key: string]: unknown;
+    }[];
+    ocr_texts: {
+      quality_score?: number;
+      text?: string;
+      [key: string]: unknown;
+    }[];
+    gs1_verification: {
+      found?: boolean;
+      country?: string;
+      [key: string]: unknown;
+    } | null;
+    cdsco_verification: {
+      found?: boolean;
+      warnings?: string[];
+      [key: string]: unknown;
+    } | null;
   };
 }
 

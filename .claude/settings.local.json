@@ -2,7 +2,8 @@
   "permissions": {
     "allow": [
       "Bash(python test_tavily.py:*)",
-      "Bash(git add:*)"
+      "Bash(git add:*)",
+      "Bash(git commit:*)"
     ],
     "deny": [],
     "ask": []

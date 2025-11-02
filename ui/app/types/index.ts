@@ -30,7 +30,7 @@ export interface VerificationDetails {
   };
   regulatory_warnings: {
     has_warnings: boolean;
-    warnings: any[];
+    warnings: string[];
     count: number;
   };
   packaging_issues: {
@@ -54,10 +54,10 @@ export interface VerificationResponse {
   recommendations: string[];
   details: VerificationDetails;
   raw_data: {
-    barcodes: any[];
-    ocr_texts: any[];
-    gs1_verification: any;
-    cdsco_verification: any;
+    barcodes: Record<string, unknown>[];
+    ocr_texts: string[];
+    gs1_verification: Record<string, unknown> | null;
+    cdsco_verification: Record<string, unknown> | null;
   };
 }
 

@@ -23,18 +23,6 @@ import {
   TrendingUp,
 } from "lucide-react";
 import { VerificationResponse } from "../types";
-import {
-  PieChart,
-  Pie,
-  Cell,
-  ResponsiveContainer,
-  BarChart,
-  Bar,
-  XAxis,
-  YAxis,
-  Tooltip,
-  Legend,
-} from "recharts";
 
 interface ResultDisplayProps {
   result: VerificationResponse;
@@ -116,12 +104,6 @@ export default function ResultDisplay({ result }: ResultDisplayProps) {
   const statusConfig = getStatusConfig(result.status);
   const riskConfig = getRiskConfig(result.risk_level);
   const StatusIcon = statusConfig.icon;
-
-  // Prepare chart data for risk visualization
-  const riskData = [
-    { name: "Safe", value: 100 - riskConfig.value, color: "#10b981" },
-    { name: "Risk", value: riskConfig.value, color: "#ef4444" },
-  ];
 
   // Prepare verification scores data
   const verificationScores = [
